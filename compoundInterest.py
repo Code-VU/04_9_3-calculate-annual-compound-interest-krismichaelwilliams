@@ -1,6 +1,5 @@
 def calculateCompoundInterest():
     numOfClients = 3
-    clientInfo = []
 
     for client in range(numOfClients):
 

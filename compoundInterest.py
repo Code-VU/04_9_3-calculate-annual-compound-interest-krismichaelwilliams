@@ -1,13 +1,20 @@
 def calculateCompoundInterest():
-    
-# This first 3 lines are provided for yougetACompoundInterest()
-# This first 3 lines are provided for you
- client_one_principal = float(input("Principle (amount): "))
- client_one_time =      float(input("Time:               "))
- client_one_rate =      float(input("Rate:               "))
- #print("Compound Interest: "+str(intrest))
+    numOfClients = 3
+    clientInfo = []
+
+    for client in range(numOfClients):
+
+        principal = float(input("Principle (amount): "))
+        time = float(input("Time:               "))
+        rate = float(input("Rate:               "))
+        totalAmount = principal * (1 + (rate / 100)) ** time
+
+        print("Compound Interest: " + str(round(totalAmount - principal, 2)))
+        if client < numOfClients - 1:
+            print("---")
 
     # end assignment
+
 
 ## If you want to test locally run > python compoundInterest.py
 
